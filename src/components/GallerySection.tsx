@@ -1,12 +1,11 @@
 'use client'
 import Image from "next/image"
-import { SlashIcon } from "../components/ui/SlashIcon";
+import { SlashIcon } from "../components/ui/SlashIcon"
 import { useState } from "react"
-const galleryImages = [
-    "/130547.png",
-    "/130415.png",
-    "/130349.png",
-]
+import Img1 from "../assets/images/130547.png"
+import Img2 from "../assets/images/130415.png"
+import Img3 from "../assets/images/130349.png"
+const galleryImages = [Img1, Img2, Img3]
 export function GallerySection() {
     const [currentIndex, setCurrentIndex] = useState(0)
     return (
@@ -16,7 +15,9 @@ export function GallerySection() {
                 <div className="text-center mb-16">
                     <div className="flex items-center justify-center gap-2 mb-4">
                         <SlashIcon />
-                        <span className="text-sm font-semibold tracking-wider text-black">PHOTO COLLECTION</span>
+                        <span className="text-sm font-semibold tracking-wider text-black">
+                            PHOTO COLLECTION
+                        </span>
                         <SlashIcon />
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">

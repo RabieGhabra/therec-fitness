@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
-    basePath: "/therec-fitness",
     images: {
         unoptimized: true,
         domains: [

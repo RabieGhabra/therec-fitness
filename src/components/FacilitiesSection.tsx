@@ -1,6 +1,7 @@
 'use client'
 import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
+import Link from "next/link"
 import Image from "next/image"
 import F143450 from "../assets/images/facilities-images/143450.png"
 import F143517 from "../assets/images/facilities-images/143517.png"
@@ -59,14 +60,14 @@ export function FacilitiesSection() {
                 </div>
                 {/* CTA Button */}
                 <div className="text-center">
-                    <a href="/facilities">
+                    <Link href="/facilities">
                         <Button
                             size="lg"
                             className="bg-gold hover:bg-gold/90 text-black font-semibold"
                         >
                             View All Facilities
                         </Button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
