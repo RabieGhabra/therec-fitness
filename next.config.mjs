@@ -1,6 +1,9 @@
+const isProd = process.env.NODE_ENV === 'production'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
+    basePath: isProd ? '/therec-fitness' : '',
+    assetPrefix: isProd ? '/therec-fitness/' : '',
     images: {
         unoptimized: true,
         domains: [

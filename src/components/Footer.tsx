@@ -3,14 +3,14 @@ import Image from "next/image"
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 import { Phone, MapPin } from "lucide-react"
-import Logo from "../assets/images/new-logo.png"
+import Logo from "../assets/icons/new-logo.png"
 // Payment Icons
-import VisaIcon from "../assets/images/icons/visa.png"
-import MadaIcon from "../assets/images/icons/Mada-Photoroom.png"
-import MasterCardIcon from "../assets/images/icons/MasterCard.png"
-import ApplePayIcon from "../assets/images/icons/applepay.png"
-import TamaraIcon from "../assets/images/icons/tamara-logo.png"
-import TabbyIcon from "../assets/images/icons/tabby-new.png"
+import VisaIcon from "../assets/icons/payment-icons/visa.png"
+import MadaIcon from "../assets/icons/payment-icons/Mada.png"
+import MasterCardIcon from "../assets/icons/payment-icons/MasterCard.png"
+import ApplePayIcon from "../assets/icons/payment-icons/applepay.png"
+import TamaraIcon from "../assets/icons/payment-icons/tamara-logo.png"
+import TabbyIcon from "../assets/icons/payment-icons/tabby-logo.png"
 export function Footer() {
     const payments = [
         { icon: VisaIcon, width: 36, height: 8, alt: "Visa" },

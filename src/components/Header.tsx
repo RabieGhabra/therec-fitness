@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { Button } from "../components/ui/button"
 import { Phone, Globe, MapPin } from "lucide-react"
 import Image from "next/image"
-import Logo from '../assets/images/new-logo.png';
+import Logo from '../assets/icons/new-logo.png';
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 export function Header() {

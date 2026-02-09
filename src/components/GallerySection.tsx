@@ -2,9 +2,9 @@
 import Image from "next/image"
 import { SlashIcon } from "../components/ui/SlashIcon"
 import { useState } from "react"
-import Img1 from "../assets/images/130547.png"
-import Img2 from "../assets/images/130415.png"
-import Img3 from "../assets/images/130349.png"
+import Img1 from "../assets/images/gallery-images/130547.png"
+import Img2 from "../assets/images/gallery-images/130415.png"
+import Img3 from "../assets/images/gallery-images/130349.png"
 const galleryImages = [Img1, Img2, Img3]
 export function GallerySection() {
     const [currentIndex, setCurrentIndex] = useState(0)
