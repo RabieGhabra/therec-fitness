@@ -28,43 +28,19 @@ function Banner() {
 }
 const DEFAULT_IMAGE = "/default-avatar.png";
 const teamsData = [
-    {
-        name: "Ameen Boushnak",
-        role: "Co-founder, Operations and Projects Engineer at Aramco",
-        image: "",
-    },
-    {
-        name: "Abdullah Boushnak",
-        role: "Co-founder and CEO of Al Saqeefa Entertainment",
-        image: "",
-    },
-    {
-        name: "Ahmed Aljar",
-        role: "Influencer and Entrepreneur, Founder of Veto Marketing Agency",
-        image: "",
-    },
-    {
-        name: "Majed Tahan",
-        role: "Founder and CEO of IACO, Founder and CEO of AYM Commerce",
-        image: "",
-    },
-    {
-        name: "Mohammed Hanawi",
-        role: "Vice President of IACO, Vice President of AYM Commerce",
-        image: "",
-    },
-    {
-        name: "Abeer Alzubaydi",
-        role: "Founder and Executive Director of Al Saqeefa Entertainment",
-        image: "",
-    },
+    { name: "Ameen Boushnak", role: "Co-founder, Operations and Projects Engineer at Aramco", image: "" },
+    { name: "Abdullah Boushnak", role: "Co-founder and CEO of Al Saqeefa Entertainment", image: "" },
+    { name: "Ahmed Aljar", role: "Influencer and Entrepreneur, Founder of Veto Marketing Agency", image: "" },
+    { name: "Majed Tahan", role: "Founder and CEO of IACO, Founder and CEO of AYM Commerce", image: "" },
+    { name: "Mohammed Hanawi", role: "Vice President of IACO, Vice President of AYM Commerce", image: "" },
+    { name: "Abeer Alzubaydi", role: "Founder and Executive Director of Al Saqeefa Entertainment", image: "" },
 ];
 export default function Teams() {
     return (
         <main>
             <Header />
             <Banner />
-            <section className="bg-white py-16">
+            <section className="bg-white py-16 px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gold">
@@ -74,7 +50,6 @@ export default function Teams() {
                             From experienced trainers to wellness coaches, our team is here to guide and support your fitness journey.
                         </p>
                     </div>
-                    {/* First row: 4 cards */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-10">
                         {teamsData.slice(0, 4).map(({ name, role, image }) => (
                             <div key={name} className="bg-gray-50 rounded-xl shadow-md p-6 flex flex-col items-center text-center h-full">
@@ -92,7 +67,6 @@ export default function Teams() {
                             </div>
                         ))}
                     </div>
-                    {/* Second row: 2 cards */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                         {teamsData.slice(4).map(({ name, role, image }) => (
                             <div key={name} className="bg-gray-50 rounded-xl shadow-md p-6 flex flex-col items-center text-center h-full">

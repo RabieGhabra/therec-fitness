@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   :root {
     --background: 240 10% 3.9%;
@@ -9,8 +8,8 @@
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
     --primary: #f27d1d;
-    --popover-foreground: 0 0% 98%;
     --secondary: #5aa938;
+    --popover-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
     --accent: 45 95% 68%;
@@ -27,19 +26,31 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
-
-@layer base {
-  * {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
     @apply border-border;
+  }
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; 
   }
   body {
     @apply bg-background text-foreground;
     font-family:
       -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
   }
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
 }
-
 @layer components {
   .text-gold {
     color: var(--primary);
@@ -56,12 +67,27 @@
     border-color: var(--primary);
   }
   .section-padding {
-    @apply px-4 md:px-8 lg:px-16 xl:px-24;
+    @apply px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20;
+    width: 100%;
+    max-width: 100%;
   }
   .hero-bg {
     background-image: url("https://ext.same-assets.com/1242065685/2943266608.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
+    min-height: 60vh;
+    overflow: hidden;
+  }
+  @media (max-width: 1024px) {
+    .section-padding {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .hero-bg {
+      background-position: 60% center;
+    }
+
   }
 }

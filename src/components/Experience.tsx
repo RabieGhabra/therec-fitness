@@ -40,7 +40,9 @@ export function ExperienceSection() {
             <div className="section-padding">
                 <div className="text-center mb-16">
                     <div className="flex items-center justify-center gap-2 mb-4">
-                        <span className="text-sm font-semibold tracking-wider text-foreground">OUR FACILITIES</span>
+                        <span className="text-sm font-semibold tracking-wider text-foreground">
+                            OUR FACILITIES
+                        </span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         <span className="text-gold">EXPERIENCE FOCUSED</span>
@@ -48,16 +50,20 @@ export function ExperienceSection() {
                 </div>
                 <div className="relative mb-16">
                     <div className="flex items-center justify-center">
-                        <button onClick={scrollLeft} className="p-2 text-muted-foreground hover:text-gold transition-colors">
+                        {/* LEFT BUTTON */}
+                        <button
+                            onClick={scrollLeft}
+                            className="p-2 hover:text-gold transition text-black shrink-0"
+                        >
                             <ChevronLeft className="w-6 h-6" />
                         </button>
+                        {/* SCROLL CONTAINER */}
                         <div
                             ref={scrollContainerRef}
-                            className="flex items-center space-x-12 overflow-x-auto px-8 scrollbar-hide"
-                            style={{ minWidth: '100%' }}
+                            className="flex items-center space-x-6 sm:space-x-12 overflow-x-auto px-4 sm:px-8 scrollbar-hide"
                         >
                             {experienceIcons.map((experience, index) => (
-                                <div key={index} className="flex flex-col items-center space-y-3 w-[140px] shrink-0">
+                                <div key={index} className="flex flex-col items-center space-y-3 w-[120px] sm:w-[140px] shrink-0">
                                     <div className="w-16 h-16 flex items-center justify-center">
                                         <Image
                                             src={experience.icon}
@@ -73,9 +79,14 @@ export function ExperienceSection() {
                                 </div>
                             ))}
                         </div>
-                        <button onClick={scrollRight} className="p-2 text-muted-foreground hover:text-gold transition-colors">
+                        {/* RIGHT BUTTON */}
+                        <button
+                            onClick={scrollRight}
+                            className="p-2 hover:text-gold transition text-black shrink-0"
+                        >
                             <ChevronRight className="w-6 h-6" />
                         </button>
+
                     </div>
                 </div>
             </div>

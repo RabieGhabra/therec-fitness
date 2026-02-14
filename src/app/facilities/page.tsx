@@ -56,7 +56,7 @@ function Banner() {
                 <h3 className="text-base uppercase tracking-wide mb-1 font-semibold text-gold">
                     Explore Our Facilities
                 </h3>
-                <h1 className="text-5xl font-bold mb-3">
+                <h1 className="text-4xl md:text-5xl font-bold mb-3">
                     Premium Sports & Wellness Spaces
                 </h1>
                 <p className="text-lg mx-auto">
@@ -92,23 +92,27 @@ export default function Home() {
                         </p>
                     </div>
                     {/* Facilities Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
                         {facilityCards.map((facility, index) => (
                             <div
                                 key={index}
-                                className="bg-card border border-border overflow-hidden group hover:scale-105 transition-transform duration-300 rounded-lg shadow"
+                                className="bg-card border border-border overflow-hidden group hover:scale-[1.03] transition-transform duration-300 rounded-lg shadow"
                             >
-                                <div className="relative h-64">
+                                <div className="relative w-full aspect-[4/3]">
                                     <Image
                                         src={facility.image}
                                         alt={facility.title || `Facility ${index + 1}`}
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                    <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-300" />
-                                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-card-foreground min-h-[64px]">
-                                        <h3 className="text-2xl font-semibold mb-2">{facility.title}</h3>
-                                    </div>
+                                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+                                    {facility.title && (
+                                        <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 text-white">
+                                            <h3 className="text-lg md:text-xl font-semibold">
+                                                {facility.title}
+                                            </h3>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         ))}
